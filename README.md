@@ -1,6 +1,6 @@
 # Dockland
 
-TODO: Write a gem description
+dokku pipeline
 
 ## Installation
 
