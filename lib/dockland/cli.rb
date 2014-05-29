@@ -1,4 +1,5 @@
 require 'thor'
+require 'open3'
 
 module Dockland
   class CLI < Thor
@@ -11,7 +12,9 @@ module Dockland
 
     def method_missing(*args)
       remote = Dockland.dokku_remote
-      lines = `ssh -t #{remote[:username]}@#{remote[:host]} #{args.first.to_s} #{remote[:app_name]}`.strip
+      lines = Open3.capture3(%|ssh -t #{remote[:username]}@#{remote[:host]} #{args.first.to_s} #{remote[:app_name]}|)
+      lines.pop(2)
+      lines = lines.map(&:strip).join("\n")
 
       puts lines
     end
