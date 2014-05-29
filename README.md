@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+$ cd dokku-ready-project
+$ git config remote.dokku.url
+dokku@example.com:dokku-ready-project
+$ dockland config
+dokku-ready-project has no config vars
+```
+
+## Todo
+
+- Add option parser
 
 ## Contributing
 
