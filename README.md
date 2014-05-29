@@ -4,31 +4,27 @@ dokku pipeline
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'dockland'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install dockland
+```zsh
+$ gem install dockland
+```
 
 ## Usage
 
-```
+```zsh
 $ cd dokku-ready-project
 $ git config remote.dokku.url
 dokku@example.com:dokku-ready-project
+$ dockland config:add KEY1=VALUE
+-----> Setting config vars and restarting dokku-ready-project
+KEY1: VALUE
+-----> Releasing dokku-ready-project ...
+-----> Release complete!
+-----> Deploying dokku-ready-project ...
+-----> Deploy complete!
 $ dockland config
-dokku-ready-project has no config vars
+=== dokku-ready-project config vars ===
+KEY1: VALUE
 ```
-
-## Todo
-
-- Add option parser
 
 ## Contributing
 

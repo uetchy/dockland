@@ -1,5 +1,4 @@
 require 'thor'
-require 'open3'
 
 module Dockland
   class CLI < Thor
@@ -7,16 +6,16 @@ module Dockland
     desc 'info', 'Show info'
     def info
       remote = Dockland.dokku_remote
-      puts remote
+      puts "Remote : #{remote[:username]}@#{remote[:host]}:#{remote[:app_name]}"
+      puts "Host   : #{remote[:host]}"
+      puts "AppName: #{remote[:app_name]}"
     end
 
     def method_missing(*args)
+      command, *opt = args
       remote = Dockland.dokku_remote
-      lines = Open3.capture3(%|ssh -t #{remote[:username]}@#{remote[:host]} #{args.first.to_s} #{remote[:app_name]}|)
-      lines.pop(2)
-      lines = lines.map(&:strip).join("\n")
-
-      puts lines
+      lines = `ssh -t #{remote[:username]}@#{remote[:host]} #{command.to_s} #{remote[:app_name]} #{opt.join(' ')} 2> /dev/null`
+      puts lines.strip
     end
 
   end
