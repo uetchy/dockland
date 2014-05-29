@@ -4,13 +4,13 @@ dokku pipeline
 
 ## Installation
 
-```zsh
+```bash
 $ gem install dockland
 ```
 
 ## Usage
 
-```zsh
+```bash
 $ cd dokku-ready-project
 $ git config remote.dokku.url
 dokku@example.com:dokku-ready-project
