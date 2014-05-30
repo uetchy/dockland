@@ -11,11 +11,15 @@ module Dockland
       puts "AppName: #{remote[:app_name]}"
     end
 
+    def help
+      puts Dockland.dokku_exec( 'help' )
+    end
+
     def method_missing(*args)
       command, *opt = args
-      remote = Dockland.dokku_remote
-      lines = `ssh -t #{remote[:username]}@#{remote[:host]} #{command.to_s} #{remote[:app_name]} #{opt.join(' ')} 2> /dev/null`
-      puts lines.strip
+
+      lines = Dockland.dokku_exec( command.to_s, opt.join(' ') )
+      puts lines
     end
 
   end
