@@ -1,6 +1,6 @@
 # Dockland
 
-dokku pipeline
+Dockland provides `dokku` command for your machine.
 
 ## Installation
 
@@ -11,18 +11,16 @@ $ gem install dockland
 ## Usage
 
 ```bash
-$ cd dokku-ready-project
-$ git config remote.dokku.url
-dokku@example.com:dokku-ready-project
+$ cd sushi-app # Move to dokku-ready-project folder
 $ dockland config:add KEY1=VALUE
------> Setting config vars and restarting dokku-ready-project
+-----> Setting config vars and restarting sushi-app
 KEY1: VALUE
------> Releasing dokku-ready-project ...
+-----> Releasing sushi-app ...
 -----> Release complete!
------> Deploying dokku-ready-project ...
+-----> Deploying sushi-app ...
 -----> Deploy complete!
 $ dockland config
-=== dokku-ready-project config vars ===
+=== sushi-app config vars ===
 KEY1: VALUE
 ```
 
