@@ -18,8 +18,7 @@ module Dockland
     def method_missing(*args)
       command, *opt = args
 
-      lines = Dockland.dokku_exec( command.to_s, opt.join(' ') )
-      puts lines
+      puts Dockland.dokku_exec( command.to_s, opt.join(' ') )
     end
 
   end

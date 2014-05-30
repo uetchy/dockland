@@ -24,7 +24,6 @@ module Dockland
   def self.dokku_exec(command, options='')
     remote = parse_git_remote
     lines = `ssh -t #{remote[:username]}@#{remote[:host]} #{command} #{remote[:app_name] if is_require_app_name?(command)} #{options} 2> /dev/null`
-    lines.strip
   end
 
 end
