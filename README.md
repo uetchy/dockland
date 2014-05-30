@@ -1,5 +1,8 @@
 # Dockland
 
+[![Gem Version](https://badge.fury.io/rb/dockland.svg)](http://badge.fury.io/rb/dockland)
+[![Dependency Status](https://gemnasium.com/oame/dockland.svg)](https://gemnasium.com/oame/dockland)
+
 Dockland provides `dokku` command for your machine.
 
 ## Installation
