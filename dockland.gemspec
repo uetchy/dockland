@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["oame"]
   spec.email         = ["oame@oameya.com"]
   spec.summary       = %q{dokku command on local machine.}
-  spec.description   = %q{Dockland provides `dokku` command for your machine.}
+  spec.description   = %q{Dockland provides 'dokku' command for your machine.}
   spec.homepage      = "https://github.com/oame/dockland"
   spec.license       = "MIT"
 
