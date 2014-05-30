@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["oame@oameya.com"]
   spec.summary       = %q{dokku pipeline}
   spec.description   = %q{dokku pipeline}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/oame/dockland"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
