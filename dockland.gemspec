@@ -6,11 +6,11 @@ require 'dockland/version'
 Gem::Specification.new do |spec|
   spec.name          = "dockland"
   spec.version       = Dockland::VERSION
-  spec.authors       = ["oame"]
-  spec.email         = ["oame@oameya.com"]
+  spec.authors       = ["Yasuaki Uechi"]
+  spec.email         = ["uetchy@randompaper.co"]
   spec.summary       = %q{dokku command on local machine.}
   spec.description   = %q{Dockland provides 'dokku' command for your machine.}
-  spec.homepage      = "https://github.com/oame/dockland"
+  spec.homepage      = "https://github.com/uetchy/dockland"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
 

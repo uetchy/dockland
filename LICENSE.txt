@@ -1,4 +1,4 @@
-Copyright (c) 2014 oame
+Copyright (c) 2014 Yasuaki Uechi
 
 MIT License
 
